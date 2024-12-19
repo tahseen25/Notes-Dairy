@@ -1,0 +1,11 @@
+.diary-container {
+    flex: 1; /* Allow the diary container to take up remaining space */
+  }
+  
+  .diary-container_diaries {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust spacing between diary entries */
+    overflow-y: auto; /* Add scrolling for overflow content */
+  }
+  
