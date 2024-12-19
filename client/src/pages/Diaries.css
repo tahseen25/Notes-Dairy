@@ -1,0 +1,6 @@
+.diaries-page {
+    display: flex; /* Use flexbox to display Sidebar and DiaryContainer side by side */
+    gap: 20px; /* Adjust gap between Sidebar and DiaryContainer */
+    padding: 20px; /* Add padding around the content */
+  }
+  

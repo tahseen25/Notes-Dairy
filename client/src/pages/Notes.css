@@ -1,0 +1,8 @@
+.notes-page {
+    display: flex; /* Use flexbox to display Sidebar and NoteContainer side by side */
+    gap: 20px; /* Adjust gap between Sidebar and NoteContainer */
+    padding: 20px; /* Add padding around the content */
+  }
+  
+  /* Additional styling for NoteContainer or Sidebar can be added here */
+  
