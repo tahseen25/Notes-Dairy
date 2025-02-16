@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const { v4: uuidv4 } = require('uuid');
 
 // Define the User schema
 const userSchema = new mongoose.Schema({
@@ -11,6 +12,7 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+    unique: true,
   },
   password: {
     type: String,
@@ -20,6 +22,10 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  typing_id: {
+    type: String,
+    default: uuidv4, // Generates a new UUID for each user by default
+  }
 });
 
 
