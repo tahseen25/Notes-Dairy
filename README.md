@@ -70,10 +70,6 @@ Welcome to **Notes and Diary**, a secure and intuitive platform for jotting down
 
 ---
 
-## 🌐 Live Demo
-Check out the live demo [here](https://github.com/tahseen25/Notes-Dairy).
-
----
 
 ## 🤝 Contributing
 Contributions are welcome! Feel free to submit a pull request or open an issue.
