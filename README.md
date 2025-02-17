@@ -42,8 +42,6 @@ Welcome to **Notes and Diary**, a secure and intuitive platform for jotting down
     - Create a `.env` file in the server directory with the following:
       ```env
       MONGO_URI=your_mongo_db_uri
-      TYPINGDNA_API_KEY=your_typingdna_api_key
-      TYPINGDNA_API_SECRET=your_typingdna_api_secret
       JWT_SECRET=your_jwt_secret
       ```
 
