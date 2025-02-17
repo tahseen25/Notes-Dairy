@@ -63,10 +63,14 @@ Welcome to **Notes and Diary**, a secure and intuitive platform for jotting down
 ---
 
 ## 📸 Screenshots
-- *Home Page*
 - *Registration with TypingDNA Authentication*
+  ![Screenshot 2025-02-17 212149](https://github.com/user-attachments/assets/d991f363-f436-4704-ac51-9462157dd39a)
+
 - *Login Page*
+  ![Screenshot 2025-02-17 212149](https://github.com/user-attachments/assets/993ef250-b69e-4a2a-9c0d-2fe180721d0b)
+
 - *Notes & Diary Dashboard*
+![Screenshot 2025-02-17 214023](https://github.com/user-attachments/assets/6eeba95f-0de2-4140-8eba-3aac1b197f23)
 
 ---
 
