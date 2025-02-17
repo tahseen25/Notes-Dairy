@@ -4,8 +4,8 @@ const https = require('https');
 const querystring = require('querystring');
 
 // Constants for TypingDNA
-const API_KEY = '8c4b32bcc6c3f2d2fe94910dce94fd77';
-const API_SECRET = '7a47ee39b705693b8701bd9a9a13af35';
+const API_KEY = '{YOUR_TYPINGDNA_API_KEY}';
+const API_SECRET = '{YOUR_TYPINGDNA_API_SECRET}';
 const BASE_URL = 'api.typingdna.com';
 
 // Helper function to send typing data to TypingDNA
