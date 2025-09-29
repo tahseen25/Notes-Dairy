@@ -80,10 +80,6 @@ Contributions are welcome! Feel free to submit a pull request or open an issue.
 
 ---
 
-## 📄 License
-This project is licensed under the MIT License.
-
----
 
 ## ✨ Acknowledgements
 - [TypingDNA](https://www.typingdna.com/) for innovative typing biometrics.
