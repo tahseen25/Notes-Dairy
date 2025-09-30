@@ -1,14 +1,41 @@
-# Notes and Diary 📓
+# Notes & Diary 📓
 
-Welcome to **Notes and Diary**, a secure and intuitive platform for jotting down your thoughts, notes, and daily experiences. This project leverages **TypingDNA** for authentication, ensuring an added layer of security by verifying your unique typing patterns.
+**Notes & Diary** is a secure and intuitive web application for creating, organizing, and managing personal notes and diary entries. The project integrates **TypingDNA** for biometric authentication, providing an extra layer of security by analyzing unique typing patterns.
 
 ## 🚀 Features
-- **Secure Authentication**: Utilizes TypingDNA to analyze typing patterns, enhancing account security.
-- **Diary & Notes**: Write, edit, and organize personal notes and diary entries effortlessly.
-- **Responsive Design**: Accessible across all devices with a clean and modern UI.
-- **No Autocomplete or Copy-Paste**: Autocomplete and copy-paste are disabled to maintain the integrity of TypingDNA's authentication.
 
----
+- **Secure Authentication**  
+  Leverages TypingDNA to verify a user’s identity through typing patterns, enhancing account security beyond traditional passwords.
+
+- **Diary & Notes Management**  
+  Create, edit, delete, and organize diary entries and notes with a clean, user-friendly interface.
+
+- **Encrypted Storage**  
+  All diary and note content is encrypted in MongoDB, ensuring your data remains private and secure.
+
+- **Responsive Design**  
+  Works seamlessly across devices with a modern, minimalistic UI.
+
+- **Input Security**  
+  Autocomplete and copy-paste are disabled to maintain the integrity of TypingDNA authentication.
+
+- **Customizable Colors**  
+  Assign colors to diary entries or notes to easily organize and differentiate content.
+
+## ⚡ Tech Stack
+
+- **Frontend**: React.js, Context API, React Hooks  
+- **Backend**: Node.js, Express.js, MongoDB  
+- **Authentication**: TypingDNA & JWT  
+- **Encryption**: `mongoose-encryption` for securing diary and note content  
+
+## 🔒 Security Highlights
+
+- Biometric authentication through TypingDNA  
+- JWT-based token authentication  
+- Encrypted diary and note entries in MongoDB  
+- Protection against unauthorized access and common vulnerabilities  
+
 
 ## 🛠️ Technologies Used
 - **Frontend**: React.js, CSS
