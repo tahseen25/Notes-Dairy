@@ -1,38 +1,39 @@
 const mongoose = require('mongoose');
-const encrypt = require('mongoose-encryption');
 const Schema = mongoose.Schema;
+const { encrypt, decrypt } = require('../utils/encryption');
 
 const noteSchema = new Schema({
-  title: {
-    type: String
-  },
-  body: {
-    type: String
-  },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    required: true
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  color: {
-    type: String
-  }
+    title: String,
+    body: String,
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    color: String
 });
 
-// Load encryption keys from environment variables
-const encKey = process.env.ENC_KEY; // 32 bytes
-const sigKey = process.env.SIG_KEY; // 64 bytes
-
-// Apply encryption to sensitive fields
-noteSchema.plugin(encrypt, {
-  encryptionKey: encKey,
-  signingKey: sigKey,
-  encryptedFields: ["title", "body"]
+// Encrypt before saving
+noteSchema.pre('save', function(next) {
+    if (this.isModified('title') && this.title && this.userKey) {
+        this.title = encrypt(this.title, this.userKey);
+    }
+    if (this.isModified('body') && this.body && this.userKey) {
+        this.body = encrypt(this.body, this.userKey);
+    }
+    next();
 });
+
+// Decrypt after fetching
+noteSchema.methods.decryptFields = function(userKey) {
+    if (this.title) this.title = decrypt(this.title, userKey);
+    if (this.body) this.body = decrypt(this.body, userKey);
+};
 
 const Note = mongoose.model('Note', noteSchema);
+
 module.exports = Note;
